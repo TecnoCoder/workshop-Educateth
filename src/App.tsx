@@ -16,13 +16,13 @@ function App() {
     address: ADDRESS_CONTRACT,
     functionName: 'name',
   })
-
-   const { data: balanceOf } = useReadContract({
+  
+  const { data: balanceOf } = useReadContract({
     abi: ABI,
     address: ADDRESS_CONTRACT,
-    functionName: 'balanceOf',
+    functionName: "balanceOf",
     args: [address],
-  })
+}) as { data: number };
 
   return (
     <>
